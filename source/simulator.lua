@@ -1,6 +1,6 @@
 -- This file contains methods that are only called when running in the Simulator.
 -- See https://sdk.play.date/1.9.3/#_simulator_debug_callbacks for more information
-
+local pd = playdate
 local prefix <const> = "[Simulator] "
 
 --- Lets you act on keyboard key presses when running in the Simulator ONLY.
@@ -8,7 +8,7 @@ local prefix <const> = "[Simulator] "
 --- via your keyboard.
 ---
 --- @param key string The character pressed on the keyboard, if unused by the Simulator.
-function playdate.keyPressed(key)
+function pd.keyPressed(key)
 	print(prefix .. string.format("Pressed %s key", key))
 end
 
@@ -17,7 +17,7 @@ end
 --- via your keyboard.
 ---
 --- @param key string The character released on the keyboard, if unused by the Simulator.
-function playdate.keyReleased(key)
+function pd.keyReleased(key)
 	print(prefix .. string.format("Released %s key", key))
 end
 
@@ -26,8 +26,8 @@ end
 --- color selected with `playdate.setDebugDrawColor()`).
 ---
 --- White pixels are drawn in the debugDrawColor. Black pixels are transparent.
-function playdate.debugDraw()
-	playdate.graphics.pushContext()
+function pd.debugDraw()
+	pd.graphics.pushContext()
 	-- Change the color of all our debug drawing. Default is red
 	-- Use this line to change the debug color (this one is hot pink @ 30%)
 	-- playdate.setDebugDrawColor(0.9, 0.3, 0.96, 0.3)
@@ -39,5 +39,5 @@ function playdate.debugDraw()
 	-- black, which is treated as transparent in `debugDraw`
 	-- playdate.graphics.setImageDrawMode(playdate.graphics.kDrawModeFillWhite)
 	-- playdate.graphics.drawText("hello", 0, 10)
-	playdate.graphics.popContext()
+	pd.graphics.popContext()
 end

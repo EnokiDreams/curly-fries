@@ -1,6 +1,6 @@
 -- All the callbacks for button presses.
 -- See https://sdk.play.date/1.9.3/Inside%20Playdate.html#buttonCallbacks for more information
-
+local pd = playdate
 local prefix <const> = "[Button] "
 
 --
@@ -8,17 +8,17 @@ local prefix <const> = "[Button] "
 --
 
 --- Called immediately when the user presses the "A" button.
-function playdate.AButtonDown()
+function pd.AButtonDown()
 	print(prefix .. "A button pressed down.")
 end
 
 --- Called after the "A" button is held for one second.
-function playdate.AButtonHeld()
+function pd.AButtonHeld()
 	print(prefix .. "A button held down for one second.")
 end
 
 --- Called immediately after the user releases the "A" button
-function playdate.AButtonUp()
+function pd.AButtonUp()
 	print(prefix .. "A button released.")
 end
 
@@ -27,17 +27,17 @@ end
 --
 
 --- Called immediately when the user presses the "B" button.
-function playdate.BButtonDown()
+function pd.BButtonDown()
 	print(prefix .. "B button pressed down.")
 end
 
 --- Called after the "B" button is held for one second.
-function playdate.BButtonHeld()
+function pd.BButtonHeld()
 	print(prefix .. "B button held down for one second.")
 end
 
 --- Called immediately after the user releases the "B" button
-function playdate.BButtonUp()
+function pd.BButtonUp()
 	print(prefix .. "B button released.")
 end
 
@@ -46,41 +46,41 @@ end
 --
 
 --- Called immediately after the player presses the down direction on the d-pad.
-function playdate.downButtonDown()
+function pd.downButtonDown()
 	print(prefix .. "Down button pressed.")
 end
 
 --- Called immediately after the player releases the down direction on the d-pad.
-function playdate.downButtonUp()
+function pd.downButtonUp()
 	print(prefix .. "Down button released.")
 end
 
 --- Called immediately after the player presses the left direction on the d-pad.
-function playdate.leftButtonDown()
+function pd.leftButtonDown()
 	print(prefix .. "Left button pressed.")
 end
 
 --- Called immediately after the player releases the left direction on the d-pad.
-function playdate.leftButtonUp()
+function pd.leftButtonUp()
 	print(prefix .. "Left button released.")
 end
 
 --- Called immediately after the player presses the right direction on the d-pad.
-function playdate.rightButtonDown()
+function pd.rightButtonDown()
 	print(prefix .. "Right button pressed.")
 end
 
 --- Called immediately after the player releases the right direction on the d-pad.
-function playdate.rightButtonUp()
+function pd.rightButtonUp()
 	print(prefix .. "Right button released.")
 end
 
 --- Called immediately after the player presses the up direction on the d-pad.
-function playdate.upButtonDown()
+function pd.upButtonDown()
 	print(prefix .. "Up button pressed.")
 end
 
 --- Called immediately after the player releases the up direction on the d-pad.
-function playdate.upButtonUp()
+function pd.upButtonUp()
 	print(prefix .. "Up button released.")
 end
